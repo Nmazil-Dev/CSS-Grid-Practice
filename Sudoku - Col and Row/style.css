@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: repeating-linear-gradient(rgb(185, 226, 253), rgb(17, 143, 126));
+    height: 97.2vh;
+    justify-content: center;
+    font-family: fantasy;
+}
+
+.container{
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+    justify-content: center;
+}
+/* Styling for large squares */
+.square{
+    background: rgba(255, 255, 255, 0.473);
+    border: 2px solid rgba(255, 255, 255, 0.342);
+    border-radius: 15px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2px;
+}
+.box{
+    background: rgba(255, 255, 255, 0.473);
+    border: 2px solid rgba(255, 255, 255, 0.342);
+    grid-gap: 10px;
+}
+.box:hover{
+    background: rgb(253, 214, 129);
+    transition: background 2.5s;
+}
+/* Change corner borders for sudoku squares */
+.box:nth-child(1){
+    border-radius: 15px 0px 0px;
+}
+.box:nth-child(3){
+    border-radius: 0px 15px 0px 0px;
+}
+.box:nth-child(7){
+    border-radius: 0px 0px 0px 15px;
+}
+.box:nth-child(9){
+    border-radius: 0px 0px 15px 0px;
+}
